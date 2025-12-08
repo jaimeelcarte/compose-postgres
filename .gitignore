@@ -1,0 +1,34 @@
+# Docker volumes and data
+pg_data/
+pgadmin_data/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# SQL dumps and backups
+*.sql.gz
+*.dump
+backup/
+backups/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+tmp/
+temp/
+
+# OS files
+Thumbs.db
