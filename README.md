@@ -69,7 +69,7 @@ sudo apt install -y pgadmin4-desktop
 Clona este repositorio y navega a la carpeta:
 
 ```bash
-git clone <url-de-tu-repositorio>
+git clone https://github.com/jaimeelcarte/compose-postgres
 cd compose-postgres
 ```
 
