@@ -17,16 +17,14 @@ Abre una terminal y ejecuta los siguientes comandos:
 sudo apt update && sudo apt upgrade -y
 
 # Instalar dependencias necesarias
-sudo apt install -y ca-certificates curl gnupg lsb-release
+sudo apt install ca-certificates curl gnupg gnupg-agent lsb-release software-properties-common -y
 
 # Agregar la clave GPG oficial de Docker
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
 # Configurar el repositorio de Docker
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Instalar Docker Engine y Docker Compose
 sudo apt update
